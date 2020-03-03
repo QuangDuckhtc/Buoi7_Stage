@@ -1,0 +1,132 @@
+*{
+	margin: 0px auto; 
+	padding: 0; 
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none; 
+}
+#wrapper{
+	height: 60px;
+	width: 100%; 
+	background-color: #DFDFDF;
+	display: flex; 
+	justify-content: center; 
+}
+#icon {
+	margin-top:10px; 
+}
+#menu > ul > li  {
+	display: inline-block;
+	position: relative;
+	
+}
+#menu > ul >li:nth-child(4)::after{
+	content: " "; 
+	
+	border: 5px solid black;
+	position: absolute;
+	right: 2px;
+	top: 25px;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+#menu >ul li:hover{
+	background-color: #ebebeb;
+}
+#menu >ul >li a{
+	 
+	padding: 0px 30px;
+	display:block;
+	height: 60px; 
+	line-height: 60px;
+	
+}
+
+#menu >ul >li>ul{
+	display: none;
+
+	
+}
+#menu >ul>li:hover>ul{
+	display: block;
+	background-color:#DFDFDF; 
+	position: absolute;
+	width: 160px;
+	top: 100%;
+	left: 0px;
+
+}
+.sub-menu >ul>li{
+	position: relative;
+
+}
+.sub-menu >ul>li:after{
+	content: " ";
+	position: absolute;
+	right: 3px;
+	top: 25px;
+	border: 5px solid black;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid transparent;
+}
+.sub-menu >ul>li>ul{
+	position: absolute;
+	left: 100%;
+	top: 0px;
+}
+.sub-menu >ul >li >ul {
+	display: none;
+}
+.sub-menu >ul> li:hover ul {
+	display: block; 
+	width: 160px;
+	background-color: #DFDFDF;
+}
+
+#tooltip{
+	width: 250px;
+	height: 250px;
+	border: 1px solid black; 
+	margin-top:50px; 
+
+}
+#tokuda{
+	width: 100%;
+	height:100%;
+}
+#content{
+	width: 150px;
+	height: 60px;
+	margin-top: 3px; 
+	background-color: red;
+	border: 1px solid red; 
+	border-radius: 5px ;
+	color: white;
+	padding: 10px 0px 10px 0px;
+	position: relative;
+	display: none;
+}
+
+#content:before{
+	content:" ";
+	position: absolute;
+	top:-12px;
+	right: 40px; 
+	border: 8px solid red;
+	border-top: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-right:  5px solid transparent;
+
+}
+#tooltip:hover #content{
+	display: block;
+}
